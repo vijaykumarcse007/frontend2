@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- <h2>JavaScript Prompt</h2>
+
+<button onclick="myFunction()">Try it</button> -->
+
+<!-- <p id="demo"></p> -->
+<script type="text/javascript">
+
+setTimeout(function OpeningCeremony(){
+    document.write("Let the games begin")
+     Score=({red:0,
+        blue:0,
+        green:0,
+        yellow:0});
+
+    document.write("<br>"+"red"+" "+Score.red);
+    
+    document.write("<br>"+"blue"+" "+Score.blue);
+    document.write("<br>"+"green"+" "+Score.green);
+    document.write("<br>"+"yellow"+" "+Score.yellow);
+    setTimeout(function race100(red,blue,green,yellow){
+       
+        // Score={red:0,blue:0,green:0,yellow:0};
+        document.write("<br>"+"--------------------");
+        document.write("<br>"+"Race100M Game Starts");
+        document.write("<br>"+"--------------------");
+        
+           let res=Math.floor(Math.random()*(15-10))+10;
+            let res1=Math.floor(Math.random()*(15-10))+10;
+            let res2=Math.floor(Math.random()*(15-10))+10;
+            let res3=Math.floor(Math.random()*(15-10))+10;
+            
+            // document.write("in red"+res);
+            // document.write("in red"+res1);
+            // document.write("in red"+res2);
+            // document.write("in red"+res3);
+            //document.write(Math.min(res,res1,res2,res3))
+            let max=Math.min(res,res1,res2,res3)
+            let num=[res,res1,res2,res3];
+            // function sl(number){
+                let sl=num.sort((a,b)=>a-b)[1];
+                 //document.write(sl)
+            // }
+             //document.write(sl);
+            if(sl==res1){
+                Score.blue=25;
+                document.write("<br>"+"red"+" "+Score.red);
+    
+                document.write("<br>"+"blue"+" "+Score.blue);
+                document.write("<br>"+"green"+" "+Score.green);
+                document.write("<br>"+"yellow"+" "+Score.yellow);
+                Score['blue']=Number(25);
+                
+                
+                
+            }
+            else if(sl==res){
+                Score.red=25;
+
+                document.write("<br>"+"red"+" "+Score.red)
+                
+    
+                document.write("<br>"+"blue"+" "+Score.blue);
+                document.write("<br>"+"green"+" "+Score.green);
+                document.write("<br>"+"yellow"+" "+Score.yellow);
+                Score['red']=Number(25);
+            }
+            else if(sl==res2){
+                Score.green=25;
+                
+                document.write("<br>"+"red"+" "+Score.red);
+    
+                document.write("<br>"+"blue"+" "+Score.blue);
+                document.write("<br>"+"green"+" "+Score.green);
+                document.write("<br>"+"yellow"+" "+Score.yellow);
+                Score['green']=Number(25);
+            }
+            else if(sl==res3){
+                Score.yellow=25;
+                
+                document.write("<br>"+"red"+" "+Score.red);
+    
+                document.write("<br>"+"blue"+" "+Score.blue);
+                document.write("<br>"+"green"+" "+Score.green);
+                document.write("<br>"+"yellow"+" "+Score.yellow);
+                Score['yellow']=Number(25);
+            }
+            if(max==res){
+                Score.red=50;
+                document.write("<br>"+"red"+" "+Score.red)
+                
+    
+                document.write("<br>"+"blue"+" "+Score.blue);
+                document.write("<br>"+"green"+" "+Score.green);
+                document.write("<br>"+"yellow"+" "+Score.yellow);
+                Score['red']=(Number(Score.red)+Number(50));
+                
+            }
+            else if(max==res1){
+                Score.blue=50;
+                
+                document.write("<br>"+"red"+" "+Score.red);
+    
+                document.write("<br>"+"blue"+" "+Score.blue);
+                document.write("<br>"+"green"+" "+Score.green);
+                document.write("<br>"+"yellow"+" "+Score.yellow);
+                Score['blue']=(Number(Score.blue)+Number(50));
+            }
+            else if(max==res2){
+                Score.green=50;
+                
+                document.write("<br>"+"red"+" "+Score.red);
+    
+                document.write("<br>"+"blue"+" "+Score.blue);
+                document.write("<br>"+"green"+" "+Score.green);
+                document.write("<br>"+"yellow"+" "+Score.yellow);
+                Score['green']=(Number(Score.green)+Number(50));
+            }
+            else if(max==res3){
+                Score.yellow=50;
+                
+                document.write("<br>"+"red"+" "+Score.red);
+    
+                document.write("<br>"+"blue"+" "+Score.blue);
+                document.write("<br>"+"green"+" "+Score.green);
+                document.write("<br>"+"yellow"+" "+Score.yellow);
+                Score['yellow']=(Number(Score.yellow)+Number(50));
+            }
+
+
+            // Time out function for Long
+            setTimeout(function LongJump(red,blue,green,yellow){
+
+            let res=Math.floor(Math.random()*(50-10))+10;
+            let res1=Math.floor(Math.random()*(50-10))+10;
+            let res2=Math.floor(Math.random()*(50-10))+10;
+            let res3=Math.floor(Math.random()*(50-10))+10;
+
+            document.write("<br>"+"--------------------");
+            document.write("<br>"+"Long Jump game Starts Here");
+            document.write("<br>"+"--------------------");
+
+            let max=Math.max(res,res1,res2,res3)
+            
+            if(max==res){
+                //Score.red=150;
+                
+                document.write("<br>"+"red"+" "+(Number(Score.red)+Number(150)))
+                Score['red']=(Number(Score.red)+Number(150));
+                
+            }
+            else if(max==res1){
+                //Score.blue=150;
+                document.write("<br>"+"blue"+" "+(Number(Score.blue)+Number(150)))
+                Score['blue']=(Number(Score.blue)+Number(150));
+            }
+            else if(max==res2){
+                //Score.green=150;
+                document.write("<br>"+"green"+" "+(Number(Score.green)+Number(150)))
+                Score['green']=(Number(Score.green)+Number(150));
+            }
+            else if(max==res3){
+                //Score.yellow=150;
+                document.write("<br>"+"yellow"+" "+(Number(Score.red)+Number(150)))
+                Score['yellow']=(Number(Score.yellow)+Number(150));
+            }
+            document.write("<br>"+"--------------------");
+            document.write("<br>"+"High Jump game Starts");
+            document.write("<br>"+"--------------------");
+            
+            setTimeout(function HighJump(red,blue,green,yellow){
+                
+                let b="red"
+                    let s= prompt("enter")
+                    
+                    if(s==="red"){
+
+                        document.write("<br>"+"red "+(Number(Score.red)+Number(100)))
+                        Score['red']=(Number(Score.red)+Number(100));
+                    }
+                    else if(s==="blue"){
+                        document.write("<br>"+"blue "+(Number(Score.blue)+Number(100)))
+                        Score['blue']=(Number(Score.blue)+Number(100));
+                    }
+                    else if(s==="green"){
+                        document.write("<br>"+"green "+(Number(Score.green)+Number(100)))
+                        Score['green']=(Number(Score.green)+Number(100));
+                    }
+                    else if(s==="yellow"){
+                        document.write("<br>"+"yellow "+(Number(Score.yellow)+Number(100)))
+                        Score['yellow']=(Number(Score.yellow)+Number(100));
+                    }
+                    else{
+                        document.write("<br>"+"Event was Cancled");
+                    }
+
+
+                    setTimeout(function Awardceremony(red,blue,green,yellow){
+
+                        document.write("<br>"+"--------------------");
+
+                        document.write("<br>"+"AwardCeremony");
+                        document.write("<br>"+"--------------------");
+                        document.write("<br>"+"red"+" "+Score.red);
+                         
+                        document.write("<br>"+"blue"+" "+Score.blue);
+                        document.write("<br>"+"green"+" "+Score.green);
+                        document.write("<br>"+"yellow"+" "+Score.yellow);
+                        
+                        let result=[Score.red,Score.blue,Score.green,Score.yellow]
+                        let a=result.sort((a,b)=>b-a)
+
+                        document.write("<br>"+"--------------------");
+                        document.write("<br>"+"First Price: "+a[0]);
+                        document.write("<br>"+"Second Price: "+a[1]);
+                        document.write("<br>"+"Third Price: "+a[2]);
+                        document.write("<br>"+"Fourth Price: "+a[3]);
+                    },2000)
+            },2000)
+
+
+
+            },2000)
+        
+    },3000)
+
+},1000);
+</script>
+
+<!-- <script>
+    
+function myFunction() {
+  let text;
+  let person = prompt("Please enter your name:", "Harry Potter");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = "Hello " + person + "! How are you today?";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script> -->
+
+</body>
+</html>
